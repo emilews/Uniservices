@@ -4,9 +4,15 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.9.2",
+    "css-loader": "^2.1.0",
+    "mdbreact": "^4.11.0",
     "react": "^16.8.3",
+    "react-content-loader": "^4.0.1",
     "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5"
+    "react-form-login": "^1.1.4",
+    "react-scripts": "2.1.5",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1"
   },
   "scripts": {
     "start": "react-scripts start",

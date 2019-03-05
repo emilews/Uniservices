@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import TopNav from './TopNav';
 import './App.css';
+import Footer from './Footer'
+import { LoginForm } from 'react-form-login';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <LoginForm
+          onSubmit={(username, password, isRemember) => {
+            // Sending AJAX request ...
+            console.log(username, password, isRemember);
+          }}
+        />
+
+        <div>
+          <Footer/>
+        </div>
       </div>
     );
   }
