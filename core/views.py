@@ -23,11 +23,8 @@ def Login(request):
         else:
             return HttpResponseNotFound("User not found.")
 
- @csrf_exempt                  
+@csrf_exempt                  
 def getPass(request):
     if request.method == 'POST':
-        data_unicode = request.body.decode('utf-8')
-        body = json.loads(data_unicode)
-        email = body['pass']
-        hash = sha256_crypt.hash(email)
-        return JsonResponse({'pass': hash})
+        hash = sha256_crypt.using(rounds=5000).hash(request.POST.get('pass'))
+        print(hash)
