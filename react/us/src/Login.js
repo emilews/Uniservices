@@ -5,7 +5,6 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
 
-
 class Login extends Component{
     render(){
         return (
@@ -37,7 +36,12 @@ class Login extends Component{
                     />
                 </div>
                 <div className="FormContainer">
-                    <Button variant="contained" color="primary" className="button">
+                    <Button variant="contained" color="primary" className="button" onClick={() => {
+                        let user = document.getElementById("outlined-email-input").value;
+                        let pass = document.getElementById("outlined-password-input").value;
+                        console.log(user);
+                        console.log(pass);
+                    }}>
                         Iniciar Sesión
                     </Button>
                 </div>
