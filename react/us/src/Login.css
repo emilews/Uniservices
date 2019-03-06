@@ -5,3 +5,9 @@
     margin-right: auto;
     width: auto;
 }
+.FormContainer{
+    text-align: center;
+}
+.Form{
+    display: inline-block;
+}
